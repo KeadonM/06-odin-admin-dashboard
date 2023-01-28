@@ -2,4 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  --primary-light: rgb(255, 255, 255);
+  --primary-dark: rgb(199, 199, 199);
+  --accent-main: rgb(61, 168, 255);
+  --accent-secondary: rgb(255, 224, 86);
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.header {
+  background-color: var(--primary-light);
+
+  grid-column: 2 / -1;
+}
+
+.sidebar {
+  color: white;
+  background-color: var(--accent-main);
+
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  background-color: var(--primary-dark);
+
+  grid-column: 2 / -1;
 }
